@@ -1,0 +1,12 @@
+import re
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s1=list(re.sub(r'\s+|[^a-zA-Z0-9]','',s).lower())
+        i,j=0,len(s1)-1
+        while i<j:
+            if s1[i]==s1[j]:
+                i+=1
+                j-=1
+            else:
+                return False
+        return True
